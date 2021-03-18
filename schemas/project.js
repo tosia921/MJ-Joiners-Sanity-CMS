@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
@@ -18,10 +18,11 @@ export default {
       },
     },
     {
-      name: 'Categories',
-      title: 'Choose Category',
+      name: 'categories',
+      title: 'Categories',
+      description: 'Choose your project Category',
       type: 'reference',
-      to: {type: 'categories'},
+      to: {type: 'category'},
     },
     {
       name: 'featured',
@@ -32,6 +33,7 @@ export default {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
+      description: 'This is your preview Image',
       options: {
         hotspot: true,
       },
