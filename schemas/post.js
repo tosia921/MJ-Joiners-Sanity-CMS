@@ -18,10 +18,15 @@ export default {
       },
     },
     {
-      name: 'author',
-      title: 'Author',
+      name: 'Categories',
+      title: 'Choose Category',
       type: 'reference',
-      to: {type: 'author'},
+      to: {type: 'categories'},
+    },
+    {
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean',
     },
     {
       name: 'mainImage',
@@ -30,12 +35,6 @@ export default {
       options: {
         hotspot: true,
       },
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
       name: 'publishedAt',
@@ -47,19 +46,5 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
-  ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
-    },
-  },
+  ]
 }
