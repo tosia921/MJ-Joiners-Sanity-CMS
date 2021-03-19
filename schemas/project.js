@@ -9,6 +9,12 @@ export default {
       type: 'string',
     },
     {
+      name: 'soetitle',
+      title: 'SEOTitle',
+      description: 'Describe your title for Search Engine Optimazation...',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -27,16 +33,14 @@ export default {
     {
       name: 'featured',
       title: 'Featured',
+      description: 'Would You like this project to be featured on a main page?',
       type: 'boolean',
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: 'featuredimage',
+      title: 'FeaturedImage',
+      type: 'addimage',
       description: 'This is your preview Image',
-      options: {
-        hotspot: true,
-      },
     },
     {
       name: 'publishedAt',
