@@ -1,11 +1,17 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
       name: 'title',
       title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'soetitle',
+      title: 'SEOTitle',
+      description: 'Describe your title for Search Engine Optimazation...',
       type: 'string',
     },
     {
@@ -18,23 +24,23 @@ export default {
       },
     },
     {
-      name: 'Categories',
-      title: 'Choose Category',
+      name: 'categories',
+      title: 'Categories',
+      description: 'Choose your project Category',
       type: 'reference',
-      to: {type: 'categories'},
+      to: {type: 'category'},
     },
     {
       name: 'featured',
       title: 'Featured',
+      description: 'Would You like this project to be featured on a main page?',
       type: 'boolean',
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'featuredimage',
+      title: 'FeaturedImage',
+      type: 'addimage',
+      description: 'This is your preview Image',
     },
     {
       name: 'publishedAt',
