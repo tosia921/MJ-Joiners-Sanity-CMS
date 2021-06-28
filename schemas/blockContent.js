@@ -8,6 +8,7 @@
  *    type: 'blockContent'
  *  }
  */
+
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -57,8 +58,10 @@ export default {
     // You can add additional types here. Note that you can't use
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
+
+    //custom image type defined ins schema/addimage.js
     {
-      type: 'image',
+      type: 'addimage',
       options: {hotspot: true},
     },
   ],

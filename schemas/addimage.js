@@ -7,7 +7,9 @@ export default {
         {
             title: 'Alternative Text',
             name: 'alt',
-            type: 'string'
+            type: 'string',
+            validation: (rule) => rule.required(),
+            description: 'You should put some alternate text for accessibility'
         }
     ],
     options: {
